@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/logocon.png">
+    <title>ONesq Login</title>
+</head>
+
+<body>
+    <div>
+        <main class="container">
+            <form id="login-form">
+
+                <img src="img/logo.png" class="logo">
+
+                <!--<div class="container-title">
+                    <p>Lembre-se de utilizar o prefixo 'a'.
+                    <p>Exemplo: a1234567</p>
+                </div>-->
+
+                <div class="input-box">
+                    <input placeholder="E-mail institucional ou RA" type="user" id="username">
+                    <i class="bx bx-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Senha" type="password" id="password" name="password" required>
+                    <i class="bx bx-show toggle-password"></i>
+                </div>
+
+                <div class="forgot">
+                    <label>
+                        <a href="#">Esqueci minha senha</a>
+                    </label>
+
+                </div>
+
+                <button type="submit" class="login">Login</button>
+
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
