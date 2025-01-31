@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logocon.png">
+    <link rel="stylesheet" href="aps.css">
+    <title>Análise e Projeto de Sistemas</title>
+    <style>
+        .center-text {
+            text-align: center;
+        }
+
+        .left-text {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="prof-aps">
+        <div class="header-container">
+            <img src="img/logo.png" class="logo">
+            <div class="cabecalho">
+                <p>Análise e Projeto de Sistemas</p>
+                <p style="font-size: 0.85em">Laudelino Bastos</p>
+            </div>
+        </div>
+        <div class="gestao-ensino">
+            <div class="itens-gestao-ensino">
+                <button type="submit" class="botao-itens-gestao-ensino" id="plano-ensino">
+                    <i class="bx bx-file"></i>
+                    <p>Plano de Ensino</p>
+                </button>
+            </div>
+            <div class="itens-gestao-ensino">
+                <button type="submit" class="botao-itens-gestao-ensino" id="planejamento-aulas">
+                    <i class="bx bx-file"></i>
+                    <p>Planejamento de Aulas</p>
+                </button>
+            </div>
+            <div class="itens-gestao-ensino">
+                <button type="submit" class="botao-itens-gestao-ensino" id="grade-horarios">
+                    <i class="bx bx-file"></i>
+                    <p>Grade de Horários</p>
+                </button>
+            </div>
+        </div>
+        <div class="item-mostrado" style="display: none;">
+            <h2>Informação da Disciplina</h2>
+            <div class="desc-item-mostrado">
+                <table>
+                    <tr>
+                        <th>Código</th>
+                        <th>Disciplina</th>
+                        <th>Modo de Avaliação</th>
+                        <th>Modalidade</th>
+                        <th>Oferta</th>
+                    </tr>
+                    <tr>
+                        <td>ICSG20</td>
+                        <td>Análise E Projeto De Sistemas</td>
+                        <td>Nota/Conceito E Frequência</td>
+                        <td>Presencial</td>
+                        <td>Semestral</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="8">Carga Horária</th>
+                    </tr>
+                    <tr>
+                        <th>AT</th>
+                        <th>AP</th>
+                        <th>APS</th>
+                        <th>ANP</th>
+                        <th>APCC</th>
+                        <th>CHEAD</th>
+                        <th>CHE</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr class="middle-text">
+                        <td>2</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="left-text">
+                            <p>AT: Atividades Teóricas (aulas semanais).</p>
+                            <p>AP: Atividades Práticas (aulas semanais).</p>
+                            <p>ANP: Atividades não presenciais (horas no período).</p>
+                            <p>APS: Atividades Práticas Supervisionadas (aulas no período).</p>
+                            <p>APCC: Atividades Práticas como Componente Curricular (aulas no período, esta carga
+                                horária está incluída em AP e AT).</p>
+                            <p>CHEAD: Carga horária total em EAD.</p>
+                            <p>CHE: Carga horária total extensionista.</p>
+                            <br>
+                            <p>Total: Carga horária total da disciplina em horas.</p>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th>Objetivo</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Proporcionar aos alunos conhecimentos teóricos e práticos em Análise e Projeto de
+                                Sistemas, envolvendo o estudo de conceitos fundamentais de Análise e Projeto Orientado a
+                                Objetos, além da sua aplicação por meio uma linguagem de modelagem de alto nível.</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ementa</th>
+                    </tr>
+                    <tr class="left-text">
+                        <td>Introdução à Teoria geral de sistemas. Conceitos de análise e projeto de sistemas.
+                            Paradigmas de análise e projeto de sistemas. Ferramentas da análise e projeto de sistemas.
+                            Critérios em projetos de sistemas. Estágios e objetivos do projeto. Introdução a Padrões de
+                            Projeto. Técnicas de documentação.</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <th colspan="3">Conteúdo</th>
+                    </tr>
+                    <tr>
+                        <th>Ordem</th>
+                        <th>Ementa</th>
+                        <th>Conteúdo</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="left-text">Introdução à Teoria geral de sistemas.</td>
+                        <td>Definições de Sistema. Tipos de Sistemas.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="left-text">Conceitos de análise e projeto de sistemas.</td>
+                        <td>Definições de Dado, Informação e Conhecimento. Definições de Software. Evolução do Software.
+                            Definições de Análise e Projeto de Sistemas.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="left-text">Paradigmas de análise e projeto de sistemas.</td>
+                        <td>Análise de Sistemas Tradicional. Análise Estruturada Clássica. Análise Estruturada Moderna
+                            (Análise Essencial). Análise Orientada a Objetos. Definições e Conceitos de Orientação a
+                            Objetos.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="left-text">Ferramentas da análise e projeto de sistemas.</td>
+                        <td>Linguagem de Modelagem (Visão Geral, Diagramas Estáticos e dinâmicos).</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="left-text">Critérios em projetos de sistemas.</td>
+                        <td>Modelos de Processo (Ciclos de Vida). Ciclo de Vida Clássico (Cascata). Prototipação. Ciclo
+                            de Vida em Espiral. Processo Unificado. E outros modelos.</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="left-text">Estágios e objetivos do projeto.</td>
+                        <td>Planejamento e Estudo de Viabilidade de Projeto. Requisitos. Projeto. Implementação. Testes.
+                            Manutenção. Implantação.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="left-text">Introdução a Padrões de Projeto.</td>
+                        <td>Padrões de projetos (criacional, estrutural e comportamental).</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="left-text">Técnicas de documentação.</td>
+                        <td>Documento do Projeto. Manual do Usuário. Documentos On-line.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="aps.js"></script>
+</body>
+
+</html>

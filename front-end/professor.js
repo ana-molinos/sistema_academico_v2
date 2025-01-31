@@ -4,12 +4,12 @@ document.getElementById("pagina-disciplinas").addEventListener("click", function
         containerBox.style.display = "flex";
         setTimeout(() => {
             containerBox.style.opacity = "1";
-        }, 10); // Small delay to ensure display is set before opacity transition
+        }, 10);
     } else {
         containerBox.style.opacity = "0";
         setTimeout(() => {
             containerBox.style.display = "none";
-        }, 500); // Match the transition duration in CSS
+        }, 500);
     }
 });
 
@@ -20,7 +20,7 @@ const items = [
 ];
 
 const containerBox = document.querySelector(".container-box");
-containerBox.innerHTML = ""; // Clear existing content
+containerBox.innerHTML = "";
 
 items.forEach(item => {
     const itemDiv = document.createElement("div");

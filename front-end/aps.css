@@ -8,7 +8,8 @@
 
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
   background: #ffffff;
@@ -23,23 +24,39 @@ body {
   }
 }
 
-.logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 170px;
-  height: auto;
-  padding: 10px;
-}
-
-.containerProfessor {
+.prof-aps {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.container-opcoes {
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 170px;
+  height: auto;
+  padding: 10px;
+}
+
+.cabecalho {
+  border: 1px solid #292f33;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  top: 20px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.gestao-ensino {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +69,7 @@ body {
   gap: 10px;
 }
 
-.box {
+.itens-gestao-ensino {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -64,7 +81,7 @@ body {
   position: relative;
 }
 
-.box:not(:last-child)::after {
+.itens-gestao-ensino:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 20%;
@@ -74,9 +91,9 @@ body {
   background-color: #292f33;
 }
 
-.disciplinas {
+.botao-itens-gestao-ensino {
   background: #292f33;
-  width: 180px;
+  width: 250px;
   height: 45px;
   border: none;
   color: rgb(255, 255, 255);
@@ -87,77 +104,74 @@ body {
   align-items: center;
 }
 
-.disciplinas i {
-  font-size: 20px;
-  color: #ffffff;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.disciplinas:hover {
+.botao-itens-gestao-ensino:hover {
   background-color: transparent;
   border: 1px solid #292f33;
   border-radius: 25px;
   color: #292f33;
 }
 
-.disciplinas:hover i {
-  color: #292f33;
-}
-
-.container-box {
-  display: none;
+.item-mostrado {
+  display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 50px;
   width: 75%;
   border: 1px solid #292f33;
   border-radius: 25px;
   color: #292f33;
   padding: 20px;
   background-color: transparent;
+  text-align: center;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-.item {
+.item-mostrado.show {
+  opacity: 1;
+}
+
+.desc-item-mostrado {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  width: 100%;
   gap: 10px;
-  border-radius: 25px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 5px;
 }
 
-.item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.item:hover .icon {
-  background-color: #ffffff;
-  color: #292f33;
-  border-radius: 50%;
+.tabela {
+  width: 100%;
   border: 1px solid #292f33;
+  padding: 10px;
+  background-color: transparent;
 }
 
-.item:hover p {
-  text-decoration: underline;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #292f33;
-  vertical-align: middle;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 400;
-  font-size: 17px;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
+th,
+td {
+  border: 1px solid #292f33;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+}
+
+table:nth-of-type(1) th,
+table:nth-of-type(1) td {
+  text-align: center;
+}
+
+table:nth-of-type(3) td,
+table:nth-of-type(4) td {
+  text-align: justify;
 }
