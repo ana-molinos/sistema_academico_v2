@@ -1,36 +1,33 @@
-document.getElementById("pagina-disciplinas").addEventListener("click", function () {
-    const containerBox = document.querySelector(".container-box");
-    if (containerBox.style.opacity === "0" || containerBox.style.opacity === "") {
-        containerBox.style.display = "flex";
-        setTimeout(() => {
-            containerBox.style.opacity = "1";
-        }, 10);
-    } else {
-        containerBox.style.opacity = "0";
-        setTimeout(() => {
-            containerBox.style.display = "none";
-        }, 500);
+import { Usuario } from "./usuario.js";
+import { Disciplina } from "./disciplina.js";
+
+export class Professor extends Usuario
+{
+    //Atributos privados para proteção
+    #departamento;
+    #disciplinasLecionadas = []; //Um array de disciplinas que o professor leciona
+
+    constructor(nome, cpf, login, senha, departamento)
+    {
+        super(nome, cpf, login, senha);
+
+        this.#departamento = departamento;
     }
-});
 
-const items = [
-    { name: "Análise e Projeto de Sistemas", url: "aps.html" },
-    { name: "Disciplina 2", url: "pagina2.html" },
-    { name: "Disciplina 3", url: "pagina3.html" }
-];
+    getDepartamento() { return this.#departamento; }
 
-const containerBox = document.querySelector(".container-box");
-containerBox.innerHTML = "";
+    adicionarDisciplina(disciplina) { this.#disciplinasLecionadas.push(disciplina); }
 
-items.forEach(item => {
-    const itemDiv = document.createElement("div");
-    itemDiv.className = "item";
-    itemDiv.innerHTML = `
-        <div class="icon">${item.name.charAt(0)}</div>
-        <p>${item.name}</p>
-    `;
-    itemDiv.addEventListener("click", () => {
-        window.open(item.url, "_blank");
-    });
-    containerBox.appendChild(itemDiv);
-});
+    //Sobrecarga do método mostrar infos
+    mostrarInfos()
+    {
+        return "Nome: " + this.getNome() +
+               " CPF: " + this.getCpf() +
+               " ID: "  + this.getIdUsuario();
+    }
+
+    listaDisciplinas()
+    {
+        console.log(this.#disciplinasLecionadas);
+    }
+}
