@@ -15,8 +15,8 @@ document.getElementById("pagina-disciplinas").addEventListener("click", function
 
 const items = [
     { name: "Análise e Projeto de Sistemas", url: "interfaceDisciplina.html" },
-    { name: "Disciplina 2", url: "#" },
-    { name: "Disciplina 3", url: "#" }
+    /*{ name: "Disciplina 2", url: "#" },
+    { name: "Disciplina 3", url: "#" }*/
 ];
 
 const containerBox = document.querySelector(".container-box");

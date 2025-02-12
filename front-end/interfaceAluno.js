@@ -6,6 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    const botaoHorarios = document.getElementById('hAulas');
+    if (botaoHorarios) {
+        botaoHorarios.addEventListener('click', function () {
+            window.location.href = './interfaceHorarios.html';
+        });
+    }
+
     // Initially hide the "informação da disciplina" section
     const boletimMostrado = document.querySelector('.boletim-mostrado');
     if (boletimMostrado) {
