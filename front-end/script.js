@@ -20,7 +20,7 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     const password = document.getElementById("password").value;
   
     if (username === "a1234567" && password === "1") {
-        window.location.href = "professor.html";
+        window.location.href = "interfaceProfessor.html";
     }
 
     else if (username === "a0123456" && password === "01234567") {
