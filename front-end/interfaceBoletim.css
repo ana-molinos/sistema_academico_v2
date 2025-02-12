@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ffffff;
+  margin: 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: auto;
+  padding: 10px;
+  z-index: 10;
+}
+
+.boletim {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh; /* Alterado de min-height para height */
+  padding: 0;
+  position: relative; /* Para o logo não afetar o layout */
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 800px;
+  align-items: center;
+  padding: 0; /* Removido padding */
+  margin: 0; /* Removido margin */
+}
+
+#disciplinas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin: 0; /* Removido margin */
+}
+
+#infos-container {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.5s ease;
+  display: none;
+  align-self: center;
+}
+
+.content-wrapper.active {
+  justify-content: space-around;
+}
+
+#infos-container.active {
+  opacity: 1;
+  transform: translateX(0);
+  display: block;
+}
+
+.container-disc {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #292f33;
+  border-radius: 25px;
+  padding: 15px;
+  width: 350px;
+  gap: 5px;
+  cursor: pointer;
+  position: relative;
+  background: #ffffff;
+  transition: transform 0.3s;
+  z-index: 1;
+  margin-top: 0;
+  color: #292f33;
+}
+
+.container-disc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.container-disc::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: #292f33;
+  border-radius: 25px;
+  z-index: -2;
+  opacity: 0;
+  transform: translate(0, 0);
+  transition: all 0.3s ease;
+}
+
+.container-disc:hover {
+  background-color: #fff;
+  transform: translate(-8px, -8px);
+}
+
+.container-disc:hover::after {
+  opacity: 1;
+  transform: translate(8px, 8px);
+}
+
+.container-disc.selected {
+  transform: translate(-8px, -8px);
+}
+
+.container-disc.selected::after {
+  opacity: 1;
+  transform: translate(8px, 8px);
+}
+
+.container-disc p {
+  margin: 0;
+  padding: 0;
+}
+
+.container-disc p:first-child {
+  background-color: #fff;
+  font-weight: 500;
+  color: #292f33;
+}
+
+.container-disc p:last-child {
+  color: #979797;
+  font-size: 0.85em;
+}
+
+.container-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 0;
+  width: 350px;
+  border: 1px solid #292f33;
+  border-radius: 25px;
+  color: #292f33;
+  padding: 20px;
+  background-color: #ffffff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  justify-content: space-between;
+}
+
+.container-box.active {
+  display: flex;
+  opacity: 1;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 5px;
+  width: 100%;
+}
+
+.item p:first-of-type {
+  flex: 1;
+}
+
+.item p:last-of-type {
+  min-width: 100px;
+  text-align: right;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #292f33;
+  vertical-align: middle;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 17px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
